@@ -1,5 +1,7 @@
 @extends('layout')
-
+@section('title')
+{{ $post->title }}
+@stop
 @section('content')
 <div class="jumbotron">
 </div>
@@ -34,7 +36,7 @@
     
 		</div>
 	</div>
-	<div class="col-sm-4">
+	<div class="col-md-4 hidden-sm">
 		<div class="row">
         <div class="panel panel-default show-panel">
         <div class="panel-heading">About Gabe</div>
@@ -73,4 +75,5 @@
 </div>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53dd0fd233906e4b"></script>
+<script src="../../js/style.js"></script>
 @stop

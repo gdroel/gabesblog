@@ -12,9 +12,9 @@
 
 <br>
 
-<textarea name="body" id="body" value="{{ $post->body }}"></textarea>
+<textarea name="body" id="body">{{ $post->body }}</textarea>
 <script>
-    CKEDITOR.replace( 'body' );
+    CKEDITOR.replace('body');
 </script>
 {{ Form::submit('save') }}
 {{ Form::close() }}

@@ -7,7 +7,7 @@
 
     <!--If viewing post, title is set to name of post-->
     @if(Request::is('blog/show/*'))
-    <title>Gabe Roeloffs | {{$post->title}}</title>
+    <title>@yield('title')</title>
     @else
     <title>Gabe Roeloffs | Blog</title>
     @endif
@@ -20,23 +20,21 @@
     <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/default.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/tomorrow.min.css">
 
 
     <!--JS-->
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="../../ckeditor/ckeditor.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="../../ckeditor/ckeditor.js"></script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53dd0fd233906e4b"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js"></script>
-    
-    </script>
+
 
 </head>
     
 <body>
-<nav class="navbar navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -46,21 +44,35 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{ url('/') }}">Gabe Roeloffs</a>
+      <a class="navbar-brand" href="#">Brand</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="{{ action('HomeController@index') }}">Blog</a></li>
-        <li><a href="http://github.com/gdroel">Github</a></li>
-        <li><a href="http://twitter.com/gaberoeloffs">Twitter</a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
 @yield('content')
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{ action('HomeController@index') }}">Blog</a></li>
+        <li><a href="http://github.com/gdroel">Github</a></li>
+        <li><a href="http://twitter.com/gaberoeloffs">Twitter</a></li>
+      </ul>
 
 <div class="col-md-12" id="footer">
 <a class="white" href="#">&copy 2014 Gabe Roeloffs</a> | <a href="http://twitter.com/gaberoeloffs" class="white">Twitter</a> | <a href="http://github.com/gdroel" class="white">Github</a><a href="http://github.com/gdroel/gabesblog" class="pull-right white">Fork this site on Github</a>

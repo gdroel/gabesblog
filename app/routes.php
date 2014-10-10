@@ -43,3 +43,23 @@ Route::group(array('prefix'=>'blog'), function(){
 	Route::post('/search', 'HomeController@postSearch');
 
 });
+
+Route::get('/home', function(){
+
+	return View::make('home');
+});
+
+Route::get('sitemap', function(){
+
+	$sitemap = App::make("sitemap");
+
+	$post = Post::all();
+
+	foreach($post as $post) {
+	  $sitemap->add(URL::to("/blog/show/{$post->slug}"), $post->created_at, '0.9', 'daily');
+	}
+
+	// Now, output the sitemap:
+	return $sitemap->render('xml');
+
+});

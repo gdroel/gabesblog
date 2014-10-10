@@ -12,14 +12,14 @@
                 <h2>{{ $post->title }}</h2>
                 <p class="gray"><span class="glyphicon glyphicon-time"></span> {{ $post->updated_at->format('g:ia M j') }}</p>
                 <p>{{ Str::words($post->body, 200) }}</p>
-                <p><a href="{{ action('HomeController@show', $post->slug) }}">Read More <span class="glyphicon glyphicon-arrow-right"></span></a></p>
+                <p><a href="{{ action('HomeController@show', $post->slug) }}">Read More →</a></p>
                 </div>
                 <br>
             @endforeach
            {{ $posts->links(); }}
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 hidden-sm">
         
         <div class="row">
         <div class="panel panel-default">
@@ -62,7 +62,5 @@
 
     </div>
 </div>
-<script>
-
-</script>
+<script src="../js/style.js"></script>
 @stop
