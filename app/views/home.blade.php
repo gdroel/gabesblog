@@ -37,8 +37,8 @@
       <ul class="nav navbar-nav">
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><i class="fa fa-github fa-lg"></i></a></li>
-        <li><a href="#"><i class="fa fa-twitter fa-lg"></i></a></li>
+        <li><a href="http://github.com/gdroel"><i class="fa fa-github fa-lg"></i></a></li>
+        <li><a href="http://twitter.com/gaberoeloffs"><i class="fa fa-twitter fa-lg"></i></a></li>
 
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -46,7 +46,7 @@
 </nav>
     <div class="bg1">
       <div class="jumbotron">
-        <h1>I SPECIALIZE IN DIGITAL ART.</h1>
+        <h1>I MAKE CLASSY WEBSITES.</h1>
         <br>
           <a class="down"><i class="fa fa-arrow-circle-o-down fa-4x red"></i></a>
       </div>
@@ -55,19 +55,19 @@
       <h1 class="heading red">WORK</h1>
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-sm-4">
              <img class="img-responsive" src="../images/wellsio.png">
-             <h3 class="caption">WELLSIO</h3>
+             <h3 class="caption"><a href="http://wellsio.com">WELLSIO</a></h3>
              <p class="caption">A crowdsourced database, for water wells.</p>
           </div>
-          <div class="col-md-4">
+          <div class="col-sm-4">
               <img class="img-responsive" src="../images/rhetoric.png">
-              <h3 class="caption">RHETORIC DEBATE CLUB</h3>
+              <h3 class="caption"><a href="http://rhetoricdebate.com">RHETORIC DEBATE CLUB</a></h3>
               <p class="caption">Reinventing the way debaters interact online.</p>
           </div>
-          <div class="col-md-4">
+          <div class="col-sm-4">
             <img class="img-responsive" src="../images/stars.png">
-            <h3 class="caption">GOLD STARS</h3>
+            <h3 class="caption"><a href="http://stars.gaberoeloffs.com">GOLD STARS</a></h3>
             <p class="caption">A system for giving out virtual gold stars.</p>
           </div>
         </div>
@@ -75,13 +75,13 @@
     </div>  
     <div class="bg3">
       <div class="container">
-      <div class="col-md-8 about">
+      <div class="col-sm-8 about">
         <h2 class="heading">About Me</h2>
         <p class="big">As you may have guessed by coming to this website, this site is about me. Yep. I bought a domain name,
-          and put this site on it. So now you're here. Congratulations. And you're probably wondering, who the heck is this guy, and what the heck does he do? Well, you have scrolled to the right spot in the page because these are all questions about me. So who the heck am I? I'm a 15 year old web developer, who loves chocolate ice cream, and enjoys a competitive game of ping pong. Also foosball. I'm pretty dang good at foosball. And what the heck do I do? Well that's a good question. Most people don't know what the heck HTML means (Hyper Text Markup Language by the way), or what the difference is between Java and Javascript. Which is the reason I'm here. I know how to work with this crazy tech lingo, and make it into products. Man, I love building, crafting, and deploying websites, in my constant endeavor to make the world wide web a little better. I love working with code, and fixing things that need to be solved. If you want to get in touch, be sure to hit me up on Twitter.
+          and put this site on it. So now you're here. Congratulations. And you're probably wondering, who the heck is this guy, and what the heck does he do? Well, you have scrolled to the right spot in the page because these are all questions about me. So who the heck am I? I'm a 15 year old web developer, who loves chocolate ice cream, and enjoys a competitive game of ping pong. Also foosball. I'm pretty dang good at foosball. And what the heck do I do? Well that's a good question. Most people don't know what the HTML means (Hyper Text Markup Language by the way), or what the difference is between Java and Javascript (it's like comparing ham and a hamster by the way). Which is the reason I'm here. I know how to work with this crazy tech lingo, and make it into products. Man, I love building, crafting, and deploying websites, in my constant endeavor to make the world wide web a little better. I love working with code, and fixing things that need to be solved. If you want to get in touch, be sure to hit me up on <a href="http://twitter.com/gaberoeloffs">Twitter</a>.
           </p>
       </div>
-      <div class="col-md-4 info">
+      <div class="col-sm-4 info">
         <h2 class="heading white">Core Technologies</h2>
         <hr>
         <div class="progress">
@@ -125,14 +125,26 @@
       </div>
     </div>
     <div class="bg4">
-    <h1 class="heading">CONTACT</h1>
+    <h1 class="heading red">CONTACT</h1>
     <div class="container">
-    {{ Form::open() }}
-    {{ Form::text('Subject',null,array('class'=>'form-control'))}}
+    {{ Form::open(array('action'=>'HomeController@email')) }}
+    <div class="col-md-6">
+       {{ Form::text('name',null,array('class'=>'form-control','placeholder'=>'Your Name'))}}
+    </div>
+    <div class="col-md-6">
+       {{ Form::text('email',null,array('class'=>'form-control','placeholder'=>'Your Email'))}}
+    </div>
+    <div class="col-md-12">
     <br>
-    {{ Form::textarea('Body',null,array('class'=>'form-control'))}}
+    {{ Form::text('subject',null,array('class'=>'form-control','placeholder'=>'Subject'))}}
+    <br>
+    {{ Form::textarea('body',null,array('class'=>'form-control','placeholder'=>'Write something interesting.'))}}
+    <br>
+    {{ Form::submit('Send',array('class'=>'btn btn-danger'))}}
     {{ Form::close() }}
     </div>
+    </div>
+    <br>
    </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -162,7 +174,7 @@ $(document).ready(function(){
   $(window).scroll(function(){
 
     if($(window).scrollTop() == 0){
-      ('.down').fadeIn();
+      $('.down').fadeIn();
     }
     else{
 

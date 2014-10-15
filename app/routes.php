@@ -15,7 +15,7 @@ Route::model('post', 'Post');
 
 Route::get('/', function(){
 
-	return Redirect::action('HomeController@index');
+	return View::make('home');
 });
 
 Route::group(array('prefix'=>'blog'), function(){
@@ -43,6 +43,8 @@ Route::group(array('prefix'=>'blog'), function(){
 	Route::post('/search', 'HomeController@postSearch');
 
 });
+
+Route::post('email','HomeController@email');
 
 Route::get('/home', function(){
 

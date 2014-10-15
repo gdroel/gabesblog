@@ -129,4 +129,19 @@ class HomeController extends BaseController {
 	    return Redirect::action('HomeController@index');
 	}
 
+	public function email(){
+
+    	$body = Input::get('body');
+    	$email = Input::get('email');
+
+    	Mail::send('emails.contact', compact('body','email'), function($message) {
+
+    	$message->from(Input::get('email'), Input::get('name'));
+	    $message->to('gdroel@gmail.com', 'Gabe')
+	        ->subject(Input::get('subject'));
+        });
+
+        return Redirect::back();
+
+	}
 }

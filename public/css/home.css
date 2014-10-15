@@ -17,6 +17,12 @@ a > .down{
 	color: red;
 }
 
+.caption > a{
+
+	color: black;
+}
+
+
 .bg3{
 
 	/*background-image: url('../images/computer.jpg');*/
@@ -27,12 +33,15 @@ a > .down{
 
 .bg4{
 
-	margin-top:-20px;
-	background-image: url('../images/forest.jpg');
-	height: 400px;
+	padding-top: 20px;
+	background-image: url('../images/boats.jpg');
 	background-size: cover;
 }
 
+input[type="text"]{
+
+	height: 50px;
+}
 h3.caption{
 
 	font-family: 'Fjalla One';
@@ -91,6 +100,8 @@ h2.heading{
 
 	background-color: rgba(215, 44, 44, 0.8);;
 	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .white{
