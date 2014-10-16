@@ -1,66 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!--If viewing post, title is set to name of post-->
-    @if(Request::is('blog/show/*'))
-    <title>@yield('title')</title>
-    @else
-    <title>Gabe Roeloffs | Blog</title>
-    @endif
-    <!-- CSS -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link href="../../css/style.css" rel="stylesheet">
-    <link href="../css/prism.css" rel="stylesheet" />
-
-    <!-- Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/tomorrow.min.css">
-
-
-    <!--JS-->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script src="../../ckeditor/ckeditor.js"></script>
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53dd0fd233906e4b"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js"></script>
-
-
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gabe Roeloffs</title>
+  <link href="../css/prism.css" rel="stylesheet" />
+  @if(Request::is('/'))
+    <link rel="stylesheet" href="../../css/home.css">
+  @else
+    <link rel="stylesheet" href="../../css/blog.css">
+  @endif
+  <link rel="stylesheet" href="../../css/navbar.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Average+Sans|Fjalla+One' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
 </head>
     
 <body>
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-fixed-top" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Brand</a>
+      <a class="navbar-brand" href="#">GABE ROELOFFS</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+      </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
+        <li><a href="{{ URL::to('blog') }}" class="nav-link">BLOG</a></li>
+        <li><a href="http://github.com/gdroel"><i class="fa fa-github fa-lg"></i></a></li>
+        <li><a href="http://twitter.com/gaberoeloffs"><i class="fa fa-twitter fa-lg"></i></a></li>
+
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -68,18 +55,31 @@
 
 @yield('content')
 
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="{{ action('HomeController@index') }}">Blog</a></li>
-        <li><a href="http://github.com/gdroel">Github</a></li>
-        <li><a href="http://twitter.com/gaberoeloffs">Twitter</a></li>
-      </ul>
 
-<div class="col-md-12" id="footer">
-<a class="white" href="#">&copy 2014 Gabe Roeloffs</a> | <a href="http://twitter.com/gaberoeloffs" class="white">Twitter</a> | <a href="http://github.com/gdroel" class="white">Github</a><a href="http://github.com/gdroel/gabesblog" class="pull-right white">Fork this site on Github</a>
-</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){       
+   var scroll_start = 0;
+   var startchange = $('div');
+   var offset = startchange.offset();
+   $(document).scroll(function() { 
+      scroll_start = $(this).scrollTop();
+      if(scroll_start > offset.top) {
+          $('.navbar-fixed-top').css('background-color', 'white');
+       } else {
+          $('.navbar-fixed-top').css('background-color', 'transparent');
+       }
 
-<script>hljs.initHighlightingOnLoad();</script>
+      $('.bigh1').css({
+          'margin-top' : -($(this).scrollTop()/3)+40+"px"
+       }); 
 
+   });
+ });
+</script>
 </body>
+
 
 </html>

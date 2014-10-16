@@ -50,6 +50,11 @@ h3.caption{
 	text-align: center;
 }
 
+.btn-danger{
+
+	background-color: red;
+}
+
 p.caption{
 
 	font-family: 'Average Sans';
