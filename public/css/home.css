@@ -12,6 +12,15 @@
 	padding-bottom: 20px;
 }
 
+
+.bg3{
+
+	/*background-image: url('../images/computer.jpg');*/
+	background-color: #E8E8E8 ;
+	width: 100%;
+	background-size: cover;
+}
+
 a > .down{
 
 	color: red;
@@ -23,13 +32,6 @@ a > .down{
 }
 
 
-.bg3{
-
-	/*background-image: url('../images/computer.jpg');*/
-	background-color: #E8E8E8 ;
-	width: 100%;
-	background-size: cover;
-}
 
 .bg4{
 
@@ -184,16 +186,3 @@ strong{
 	
 }
 
-.navbar-nav > li > a{
-
-	color:black;
-	font-family: 'Fjalla One';
-	font-size: 20px;
-}
-
-.navbar-brand{
-
-	color:black;
-	font-family: 'Fjalla One';
-	font-size: 25px;
-}

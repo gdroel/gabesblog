@@ -1,23 +1,62 @@
-@extends('layout')
-@section('title')
-{{ $post->title }}
-@stop
-@section('content')
-<div class="jumbotron">
-</div>
 
-<div class="container">
-	<div class="col-md-8">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gabe Roeloffs</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Average+Sans|Fjalla+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="../../css/blog.css">
+    <link rel="stylesheet" href="../../css/navbar.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+<nav class="navbar navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">GABE ROELOFFS</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://github.com/gdroel"><i class="fa fa-github fa-lg"></i></a></li>
+        <li><a href="http://twitter.com/gaberoeloffs"><i class="fa fa-twitter fa-lg"></i></a></li>
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="container down">
+	<div class="col-md-10 col-md-offset-1">
 		<div class="row">
 			<div class="show">
 			<h2>{{ $post->title }}</h2>
-      <p class="gray"><span class="glyphicon glyphicon-time"></span> {{ $post->updated_at->format('g:ia M j') }} | by <a rel="author" href="https://plus.google.com/u/0/+GabeRoeloffs?rel=author">Gabe Roeloffs</a></p>
+      <small class="gray"><span class="glyphicon glyphicon-time"></span> {{ $post->updated_at->format('g:ia M j') }} | by <a rel="author" href="https://plus.google.com/u/0/+GabeRoeloffs?rel=author">Gabe Roeloffs</a></small>
       <hr>
-			<p>{{ $post->body }}</p>
+			<p class="body big">{{ $post->body }}</p>
       <div class="addthis_sharing_toolbox"></div>
 			</div>
 		</div>
-
 		<div class="row" id="disqus">
 			 <div id="disqus_thread"></div>
     		<script type="text/javascript">
@@ -36,44 +75,13 @@
     
 		</div>
 	</div>
-	<div class="col-md-4 hidden-sm">
-		<div class="row">
-        <div class="panel panel-default show-panel">
-        <div class="panel-heading">About Gabe</div>
-          <div class="panel-body">
-            <p>Computer Enthusiast. Minimalist. I blog about PHP, Laravel, and Web Development in general. Don't forget to <a class="serif" href="http://twitter.com/gaberoeloffs">hit me up</a> on Twitter.</p>
-          </div>
-        </div>
-        </div>
-
-        <div class="row">
-        <div class="panel panel-default">
-        <div class="panel-heading">All Posts</div>
-          <div class="panel-body">
-            @foreach($posts as $post)
-            <li><a href="{{ action('HomeController@show', $post->slug) }}">{{ $post->title }}</a></li>
-            @endforeach
-          </div>
-        </div>
-        </div>
-    
-        <div class="row">
-        <div class="panel panel-default">
-        <div class="panel-heading">Share This</div>
-          <div class="panel-body">
-         <div class="addthis_sharing_toolbox"></div>
-          </div>
-        </div>
-        </div>
-
-        <div class="row moveright">
-        <a class="twitter-timeline" href="https://twitter.com/gaberoeloffs" data-widget-id="495294464449982464">Tweets by @gaberoeloffs</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        </div>
-
-	</div>
 </div>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53dd0fd233906e4b"></script>
 <script src="../../js/style.js"></script>
-@stop
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

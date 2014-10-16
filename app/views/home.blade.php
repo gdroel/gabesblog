@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gabe Roeloffs</title>
     <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Average+Sans|Fjalla+One' rel='stylesheet' type='text/css'>
@@ -29,7 +30,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">GABE ROELOFFS</a>
+      <a class="navbar-brand" href="{{ URL::to('swag')}}">GABE ROELOFFS</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -37,6 +38,7 @@
       <ul class="nav navbar-nav">
       </ul>
       <ul class="nav navbar-nav navbar-right">
+        <li class="nav-link"><a href="URL::to('/blog')">BLOG</a></li>
         <li><a href="http://github.com/gdroel"><i class="fa fa-github fa-lg"></i></a></li>
         <li><a href="http://twitter.com/gaberoeloffs"><i class="fa fa-twitter fa-lg"></i></a></li>
 
@@ -76,9 +78,9 @@
     <div class="bg3">
       <div class="container">
       <div class="col-sm-8 about">
-        <h2 class="heading">About Me</h2>
+        <h2 class="heading">ABOUT ME</h2>
         <p class="big">As you may have guessed by coming to this website, this site is about me. Yep. I bought a domain name,
-          and put this site on it. So now you're here. Congratulations. And you're probably wondering, who the heck is this guy, and what the heck does he do? Well, you have scrolled to the right spot in the page because these are all questions about me. So who the heck am I? I'm a 15 year old web developer, who loves chocolate ice cream, and enjoys a competitive game of ping pong. Also foosball. I'm pretty dang good at foosball. And what the heck do I do? Well that's a good question. Most people don't know what the HTML means (Hyper Text Markup Language by the way), or what the difference is between Java and Javascript (it's like comparing ham and a hamster by the way). Which is the reason I'm here. I know how to work with this crazy tech lingo, and make it into products. Man, I love building, crafting, and deploying websites, in my constant endeavor to make the world wide web a little better. I love working with code, and fixing things that need to be solved. If you want to get in touch, be sure to hit me up on <a href="http://twitter.com/gaberoeloffs">Twitter</a>.
+          and put this site on it. So now you're here. Congratulations. And you're probably wondering, who the heck is this guy, and what the heck does he do? Well, you have scrolled to the right spot in the page because these are all questions about me. So who the heck am I? I'm a 15 year old web developer, who loves chocolate ice cream, and enjoys a competitive game of ping pong. Also foosball. I'm pretty dang good at foosball. And what the heck do I do? Well that's a good question. Most people don't know what the HTML means (Hyper Text Markup Language by the way), or what the difference is between Java and Javascript. Which is the reason I'm here. I know how to work with this crazy tech lingo, and make it into products. I love building, crafting, and deploying websites, in my constant endeavor to make the world wide web a little better. I enjoy working with code, and fixing things that need to be solved. If you want to get in touch, be sure to hit me up on <a href="http://twitter.com/gaberoeloffs">Twitter</a>.
           </p>
       </div>
       <div class="col-sm-4 info">

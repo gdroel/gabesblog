@@ -1,0 +1,18 @@
+.navbar-nav > li > a{
+
+	color:black;
+	font-family: 'Fjalla One';
+	font-size: 20px;
+}
+
+.navbar-brand{
+
+	color:black;
+	font-family: 'Fjalla One';
+	font-size: 25px;
+}
+
+.nav-link{
+
+	margin-top: 3px;
+}
