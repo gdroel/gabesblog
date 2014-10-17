@@ -4,7 +4,7 @@
 
 <div class="jumbotron"></div>
 
-<div class="col-md-8 col-md-offset-2" id="create">
+<div class="col-md-8 col-md-offset-2 down" id="create">
 {{ Form::open(array('action'=>'HomeController@doCreate')) }}
 {{ Form::text('title',null,array('class'=>'form-control','placeholder'=>'title')) }}
 

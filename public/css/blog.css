@@ -9,6 +9,11 @@ p{
 
 	margin-top: 280px;
 }
+
+.movedownless{
+
+	margin-top: 75px;
+}
 .big{
 
 	font-size: 20px;
@@ -36,7 +41,7 @@ p{
 
 #post{
 
-	  -moz-box-shadow:    1px 1px 1px 1px #ccc;
+  -moz-box-shadow:    1px 1px 1px 1px #ccc;
   -webkit-box-shadow: 1px 1px 1px 1px #ccc;
   box-shadow:         1px 1px 1px 1px #ccc;
   width: 99%;
@@ -79,5 +84,17 @@ small{
 	color: red;
 	font-family: 'Fjalla One';
 	color: red;
+
+}
+
+.show{
+
+	background-color: white;
+	padding-top: 15px;
+	padding-left: 50px;
+	padding-right: 50px; 
+    -moz-box-shadow:    1px 1px 1px 1px #ccc;
+    -webkit-box-shadow: 1px 1px 1px 1px #ccc;
+    box-shadow:         1px 1px 1px 1px #ccc;
 
 }

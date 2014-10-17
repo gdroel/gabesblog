@@ -29,6 +29,8 @@
   <link href='http://fonts.googleapis.com/css?family=Average+Sans|Fjalla+One' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
 
+
+      <script src="../../ckeditor/ckeditor.js"></script>
 </head>
     
 <body>
