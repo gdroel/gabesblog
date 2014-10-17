@@ -4,7 +4,18 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gabe Roeloffs</title>
+
+  <title>
+  @if(isset($title))
+  {{ $title }}
+  @else
+  Gabe Roeloffs
+  @endif
+  </title>
+
+  <!--CSS FILES -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="../css/prism.css" rel="stylesheet" />
   @if(Request::is('/'))
     <link rel="stylesheet" href="../../css/home.css">
@@ -12,16 +23,12 @@
     <link rel="stylesheet" href="../../css/blog.css">
   @endif
   <link rel="stylesheet" href="../../css/navbar.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+  <!--FONTS-->
   <link href='http://fonts.googleapis.com/css?family=Average+Sans|Fjalla+One' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+
 </head>
     
 <body>
@@ -36,7 +43,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">GABE ROELOFFS</a>
+      <a class="navbar-brand" href="{{ URL::to('/') }}">GABE ROELOFFS</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -56,8 +63,9 @@
 @yield('content')
 
 
+<!-- Javascript Files -->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script>
 $(document).ready(function(){       
@@ -79,7 +87,29 @@ $(document).ready(function(){
    });
  });
 </script>
+
+<script>
+$(document).ready(function(){
+
+    $('.down').click(function(){
+    var y = $(window).scrollTop(); 
+    $("html, body").animate({ scrollTop: 580 - y }, 600);
+    });
+
+    $(window).scroll(function(){
+
+      if($(window).scrollTop() == 0){
+
+        $('.down').fadeIn();
+      }
+      else{
+
+        $('.down').fadeOut();
+      }
+    });
+});
+
+</script>
+
 </body>
-
-
 </html>

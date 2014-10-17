@@ -12,7 +12,7 @@
             @foreach($posts as $post)
                 <div class="col-md-12" id="post">
                 <h2 class="title">{{ $post->title }}</h2>
-                <small ><span class="glyphicon glyphicon-time"></span> {{ $post->updated_at->format('g:ia M j') }}</small>
+                <small><span class="glyphicon glyphicon-time"></span> {{ $post->updated_at->format('g:ia M j') }}</small>
                 <p class="body">{{ Str::words($post->body, 200) }}</p>
                 <p><a href="{{ action('HomeController@show', $post->slug) }}">Read More →</a></p>
                 </div>

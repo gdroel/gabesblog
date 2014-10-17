@@ -44,10 +44,9 @@ class HomeController extends BaseController {
 	public function show(Post $post){
 
 		$posts=Post::all();
-
 		$nextposts = Post::where('id', '>', $post->id)->min('id');
-
-		return View::make('blog.show', compact('post','posts','nextposts'));
+		$title = $post->title;
+		return View::make('blog.show', compact('post','posts','nextposts','title'));
 	}
 
 	public function showLogin(){
