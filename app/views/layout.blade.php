@@ -14,50 +14,52 @@
   </title>
 
   <!--CSS FILES -->
+
+  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="../css/prism.css" rel="stylesheet" />
-  @if(Request::is('/'))
-    <link rel="stylesheet" href="../../css/home.css">
+  @if(Request::is('/') || Request::is('bruhapp'))
+    {{ Minify::stylesheet('/css/home.css') }}
   @else
-    <link rel="stylesheet" href="../../css/blog.css">
+    {{ Minify::stylesheet('/css/blog.css')}}
   @endif
-  <link rel="stylesheet" href="../../css/navbar.css">
 
 
   <!--FONTS-->
-  <link href='http://fonts.googleapis.com/css?family=Average+Sans|Fjalla+One' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Average+Sans|Fjalla+One|Roboto:400,700,300' rel='stylesheet' type='text/css'>
+  {{-- <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'> --}}
 
 
-      <script src="../../ckeditor/ckeditor.js"></script>
+  @if(!Request::is('/'))
+  <script src="../../ckeditor/ckeditor.js"></script>
+  @endif
 </head>
     
 <body>
-<nav class="navbar navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="{{ URL::to('/') }}">GABE ROELOFFS</a>
+    <div class="nav navbar-nav navbar-left">
+      <li>
+      <a class="navbar-brand" style="font-size:25px" href="{{ URL::to('/') }}">GABE ROELOFFS</a>
+      </li>
     </div>
-
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-      </ul>
+    <div class="hidden-xs">
       <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{ URL::to('bruhapp') }}" class="nav-link">BRUH</a></li>
         <li><a href="{{ URL::to('blog') }}" class="nav-link">BLOG</a></li>
         <li><a href="http://github.com/gdroel"><i class="fa fa-github fa-lg"></i></a></li>
         <li><a href="http://twitter.com/gaberoeloffs"><i class="fa fa-twitter fa-lg"></i></a></li>
-
       </ul>
+    </div>
+    <div class="hidden-sm hidden-md hidden-lg hidden-xl">
+     <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://github.com/gdroel"><i class="fa fa-github fa-lg"></i></a></li>
+        <li><a href="http://twitter.com/gaberoeloffs"><i class="fa fa-twitter fa-lg"></i></a></li>
+      </ul>
+    </div>
+    
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
@@ -112,6 +114,24 @@ $(document).ready(function(){
 });
 
 </script>
+<script>
 
+var words = ['CLASSY','STYLISH','ELEGANT','EFFECTIVE','MODERN','ARTISTIC','SMART'];
+
+for (var i = 1; i < 100; i++) {
+    (function(i){
+
+      window.setTimeout(function(){
+         document.getElementById('change').innerHTML = words[i%7];
+      }, i * 2000);
+
+    }(i));
+
+
+
+}
+
+
+</script>
 </body>
 </html>

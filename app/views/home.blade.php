@@ -3,83 +3,132 @@
 @section('content')
 <div class="bg1">
       <div class="jumbotron">
-        <h1>I MAKE CLASSY WEBSITES.</h1>
+        <h1>I MAKE <span id="change" class="red">CLASSY</span> WEBSITES.</h1>
         <br>
-          <a class="down"><i class="fa fa-arrow-circle-o-down fa-4x red"></i></a>
+          <a class="down"><i class="fa fa-arrow-circle-o-down fa-4x"></i></a>
       </div>
-    </div>
-    <div class="bg2">
-      <h1 class="heading red">WORK</h1>
+</div>
+   <div class="bg2">
+      <h1 class="heading red">MY WORK</h1>
       <div class="container">
-        <div class="row">
-          <div class="col-sm-4">
+        <div class="row my-work">
+          <div class="col-md-4">
+            <div class="card">
              <img class="img-responsive" src="../images/wellsio.png">
              <h3 class="caption"><a href="http://wellsio.com">WELLSIO</a></h3>
-             <p class="caption">A crowdsourced database, for water wells.</p>
+             <p class="caption">A crowdsourced database, for water wells. Owners upload well info.</p>
+           </div>
           </div>
-          <div class="col-sm-4">
+          <div class="col-md-4">
+              <div class="card">
               <img class="img-responsive" src="../images/rhetoric.png">
               <h3 class="caption"><a href="http://rhetoricdebate.com">RHETORIC DEBATE CLUB</a></h3>
               <p class="caption">Reinventing the way debaters interact online.</p>
+            </div>
           </div>
-          <div class="col-sm-4">
-            <img class="img-responsive" src="../images/stars.png">
-            <h3 class="caption"><a href="http://stars.gaberoeloffs.com">GOLD STARS</a></h3>
-            <p class="caption">A system for giving out virtual gold stars.</p>
+          <div class="col-md-4">
+            <div class="card">
+            <img class="img-responsive" src="../images/stoaca.png">
+            <h3 class="caption"><a href="http://stoaca.org">STOA CALIFORNIA</a></h3>
+            <p class="caption">A new information hub for all things debate.</p>
+          </div>
+          </div>
+        </div>
+        <div class="row my-work">
+            <div class="col-md-4 col-md-offset-2">
+              <div class="card">
+             <img class="img-responsive" src="../images/stars.png">
+             <h3 class="caption"><a href="http://stars.gaberoeloffs.com">ALL THAT GLITTERS IS GOLD</a></h3>
+             <p class="caption">A personal project I made, because I wanted to give people gold stars.</p>
+           </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+             <img class="img-responsive" src="../images/sparclean.png">
+             <h3 class="caption"><a href="http://sparcleanlaundromat.com">SPARCLEAN LAUNDROMAT</a></h3>
+             <p class="caption">Website created to drive traffic to a local laundromat.</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>  
-    <div class="bg3">
-      <div class="container">
-      <div class="col-sm-8 about">
-        <h2 class="heading">ABOUT ME</h2>
-        <p class="big">As you may have guessed by coming to this website, this site is about me. Yep. I bought a domain name,
-          and put this site on it. So now you're here. Congratulations. And you're probably wondering, who the heck is this guy, and what the heck does he do? Well, you have scrolled to the right spot in the page because these are all questions about me. So who the heck am I? I'm a 15 year old web developer, who loves chocolate ice cream, and enjoys a competitive game of ping pong. Also foosball. I'm pretty dang good at foosball. And what the heck do I do? Well that's a good question. Most people don't know what the HTML means (Hyper Text Markup Language by the way), or what the difference is between Java and Javascript. Which is the reason I'm here. I know how to work with this crazy tech lingo, and make it into products. I love building, crafting, and deploying websites, in my constant endeavor to make the world wide web a little better. I enjoy working with code, and fixing things that need to be solved. If you want to get in touch, be sure to hit me up on <a href="http://twitter.com/gaberoeloffs">Twitter</a>.
-          </p>
+    </div> 
+    <div class="container-fluid bg3">
+      <div class="row">
+      <div class="col-md-8 greeting">
+        <h2 class="greeting-heading">Hey, I'm Gabe Roeloffs</h2>
+        <p>Congratulations on getting here! My name is Gabe Roeloffs, I'm 16, and I make awesome websites. Want to know some stuff about me? Of course you do. (Well, maybe.) Anyway, I'm passionate about the ocean, tennis, and of course, software development. I'm 5'8, run an 11 minute mile (don't make fun of me) and my favorite sports team is the Arizona Diamondbacks. If you want to work with me on your next software project, don't hesitate to contact me below.</p>
       </div>
-      <div class="col-sm-4 info">
-        <h2 class="heading white">Core Technologies</h2>
-        <hr>
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
-          <p class="progress-text">PHP</p>
+      <div class="col-md-4 selfie-box">
+        <img class="selfie" src="images/profile.png">
+      </div>
+    </div>
+    </div> 
+{{--     <div class="skills-bg container-fluid">
+      <h1 class="heading red ">ABOUT ME</h1>
+      <div class="col-md-6">
+        <h2 class="heading red">Stats</h2>
+        <p>Height: 5'9</p>
+      
+        <p>Favorite Ice Cream Brand: Ben & Jerry's</p>
+        <p>Fastest Running Mile: 12 minutes</p>
+
+
+      </div>
+      <div class="col-md-6">
+      <h2 class="heading">I WORK LIKE A ROCKSTAR WITH THESE TECHNOLOGIES</h2>
+      <hr>
+      
+        <div class="row best-skills">
+          
+          <div class="col-sm-3"> 
+          <div class="skill">
+             <h3 class="skill-caption">Laravel</h3>
+          </div>
+          </div>
+          <div class="col-sm-3"> 
+            <div class="skill">
+              <h3 class="skill-caption">PHP</h3>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="skill">
+              <h3 class="skill-caption">HTML</h3>  
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="skill">
+              <h3 class="skill-caption">mySQL</h3>  
+            </div>
+          </div>
+       
         </div>
+    
+      <h2 class="heading">I WORK WELL USING THESE TECHNOLOGIES</h2>
+      <hr>
+      
+        <div class="row best-skills">
+          <div class="col-sm-3"> 
+          <div class="skill">
+             <h3 class="skill-caption">Javascript</h3>
+          </div>
+          </div>
+          <div class="col-sm-3"> 
+            <div class="skill">
+              <h3 class="skill-caption">jQuery</h3>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="skill">
+              <h3 class="skill-caption">CSS</h3>  
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="skill">
+              <h3 class="skill-caption">Bootstrap</h3>  
+            </div>
+          </div>
       </div>
-      <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
-          <p class="progress-text">HTML</p>
-        </div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-          <p class="progress-text">CSS</p>
-        </div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
-          <p class="progress-text">Javascript</p>
-        </div>
-      </div>
-       <h2 class="heading white">Frameworks</h2>
-       <hr>
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
-          <p class="progress-text">Laravel</p>
-        </div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">
-          <p class="progress-text">Bootstrap</p>
-        </div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-          <p class="progress-text">Jquery</p>
-        </div>
-      </div>
-      </div>
-      </div>
+    </div>  --}}
     </div>
     <div class="bg4">
     <h1 class="heading red">CONTACT</h1>
@@ -88,6 +137,7 @@
     <div class="col-md-6">
        {{ Form::text('name',null,array('class'=>'form-control','placeholder'=>'Your Name'))}}
     </div>
+
     <div class="col-md-6">
        {{ Form::text('email',null,array('class'=>'form-control','placeholder'=>'Your Email'))}}
     </div>

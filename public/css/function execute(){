@@ -1,0 +1,31 @@
+function deleteAllCookies() {
+document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
+}
+function execute() {
+
+for(i=0; i<100; i++){
+	
+	deleteAllCookies();
+	$('.like_btn').click();
+	$('.like_btn').click();
+	deleteAllCookies();
+	$('.like_btn').click();
+	$('.like_btn').click();
+	deleteAllCookies();
+	$('.like_btn').click();
+	$('.like_btn').click();
+	deleteAllCookies();
+	$('.like_btn').click();
+	$('.like_btn').click();
+	deleteAllCookies();
+	$('.like_btn').click();
+	$('.like_btn').click();
+	deleteAllCookies();
+	$('.like_btn').click();
+	$('.like_btn').click();
+	deleteAllCookies();
+	$('.like_btn').click();
+	$('.like_btn').click();
+}
+
+}

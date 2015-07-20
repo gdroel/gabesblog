@@ -18,6 +18,11 @@ Route::get('/', function(){
 	return View::make('home');
 });
 
+Route::get('/bruhapp', function(){
+
+	return View::make('bruh');
+});
+
 Route::group(array('prefix'=>'blog'), function(){
 	
 	Route::get('/', 'HomeController@index');
@@ -43,6 +48,7 @@ Route::group(array('prefix'=>'blog'), function(){
 	Route::post('/search', 'HomeController@postSearch');
 
 });
+
 
 Route::post('email','HomeController@email');
 

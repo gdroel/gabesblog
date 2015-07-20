@@ -26,6 +26,7 @@ return array(
 	|
 	*/
 
+	//'public' => __DIR__.'/../public_html',
 	'public' => __DIR__.'/../public',
 
 	/*
